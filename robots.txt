@@ -1,7 +1,110 @@
+# robots.txt for https://www.flatpackco.com
+# Last updated: October 2026
+# Note: a crawler obeys only the most specific group that names it, so the
+# Disallow rules are repeated in every group.
+
+# ---------- Default: allow all crawlers ----------
 User-agent: *
 Allow: /
 Disallow: /phpmailer/
 Disallow: /send-mail.php
 Disallow: /test-mail.php
 
+# ---------- Search engines ----------
+User-agent: Googlebot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: Bingbot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+# ---------- AI search and answer engines (these cite and link to you) ----------
+# OpenAI: ChatGPT Search and user-initiated browsing
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+# Anthropic: Claude search and user-initiated browsing
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: Claude-User
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+# ---------- AI training and model crawlers (allowed for broader AI visibility) ----------
+User-agent: GPTBot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: CCBot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+# ---------- Sitemap ----------
 Sitemap: https://www.flatpackco.com/sitemap.xml
