@@ -1,9 +1,16 @@
 RewriteEngine On
 RewriteBase /
 
-# Force www on all requests
+# http -> https, non-www -> www
+RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://www.flatpackco.com%{REQUEST_URI} [L,R=301]
+
+# /index and /index.html -> /
+# Matches against THE_REQUEST (what the browser actually asked for) so the
+# internal DirectoryIndex lookup of index.html for "/" doesn't trigger a loop.
+RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
+RewriteRule ^ / [L,R=301]
 
 # Old project-page URLs -> new consistent lowercase-hyphenated slugs
 # NOTE: the Naaivedh rule is intentionally case-sensitive (no NC flag).
