@@ -21,6 +21,15 @@ RewriteRule ^the_beer_cafe\.html$ /the-beer-cafe-restaurant-fit-out [R=301,L,NC]
 RewriteRule ^Naaivedh\.html$ /naaivedh-sweet-shop-design-and-build [R=301,L]
 RewriteRule ^poie-and-co\.html$ /poee-and-co-goa-bar-fit-out [R=301,L,NC]
 
+# Old pages with no matching file -> current pages
+RewriteRule ^about\.html$ /about-us [R=301,L,NC]
+RewriteRule ^contact\.html$ /contact-us [R=301,L,NC]
+RewriteRule ^talk-to-us/?$ /contact-us [R=301,L,NC]
+RewriteRule ^Projects_new\.html$ /work [R=301,L,NC]
+
+# Old /post/<slug> blog URLs -> /<slug>
+RewriteRule ^post/(.+)$ /$1 [R=301,L,NC]
+
 # Old URLs -> new URLs
 Redirect 301 /search https://www.flatpackco.com/blogs
 Redirect 301 /aboutus https://www.flatpackco.com/about-us
