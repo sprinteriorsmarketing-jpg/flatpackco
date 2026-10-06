@@ -1,0 +1,101 @@
+FLATPACKCO — IMAGES FOLDER
+==========================
+
+Replace the gradient placeholders in each page by adding real images to this folder.
+All <img> tags and CSS background-image references point to paths within this folder.
+
+SUGGESTED IMAGE LIST
+--------------------
+
+GLOBAL
+  hero-bg.jpg           — Full-width hero background (restaurant/retail interior, dark mood)
+  page-hero-bg.jpg      — Inner page hero background (workshop or project image)
+  cta-bg.jpg            — CTA banner background (atmospheric interior shot)
+
+HOME PAGE
+  hero-1.jpg            — Hero grid: main image (wide shot of completed fit-out)
+  hero-2.jpg            — Hero grid: detail shot (counter or furniture close-up)
+  hero-3.jpg            — Hero grid: kitchen or service area
+  about-main.jpg        — About section: workshop or team photo (portrait orientation)
+  about-accent.jpg      — About section: small accent image (detail/craftsmanship)
+
+ABOUT PAGE
+  about-story.jpg       — Company story section image
+  about-team.jpg        — Team or workshop group photo
+
+PRODUCTS PAGE
+  product-fixed-interiors.jpg       — Fixed Interior Elements hero
+  product-decorative-ceilings.jpg   — Decorative Ceilings hero
+  product-loose-furniture.jpg       — Loose Furniture hero
+  product-kiosk.jpg                 — Kiosk Formats
+  product-facade.jpg                — Façade
+  product-signage.jpg               — Signage
+  product-kitchen.jpg               — Commercial Kitchen Equipment
+  product-lighting.jpg              — Lighting
+
+PRODUCT DETAIL PAGES
+  fixed-interiors-main.jpg          — Main gallery image
+  fixed-interiors-thumb-1.jpg       — Thumbnail: service counter
+  fixed-interiors-thumb-2.jpg       — Thumbnail: storage unit
+  fixed-interiors-thumb-3.jpg       — Thumbnail: door detail
+  fixed-interiors-thumb-4.jpg       — Thumbnail: partition
+  ceilings-main.jpg                 — Main gallery image
+  ceilings-thumb-1.jpg              — Thumbnail: wooden ceiling
+  ceilings-thumb-2.jpg              — Thumbnail: grid ceiling
+  ceilings-thumb-3.jpg              — Thumbnail: acrylic/backlit
+  ceilings-thumb-4.jpg              — Thumbnail: MS frame
+  furniture-main.jpg                — Main gallery image
+  furniture-thumb-1.jpg             — Thumbnail: dining chairs
+  furniture-thumb-2.jpg             — Thumbnail: sofa/lounge
+  furniture-thumb-3.jpg             — Thumbnail: tables
+  furniture-thumb-4.jpg             — Thumbnail: outdoor/planters
+
+CLIENTS PAGE
+  client-logo-1.png     — The Beer Cafe logo
+  client-logo-2.png     — Social (Impresario) logo
+  client-logo-3.png     — Poee & Co logo
+  client-logo-4.png     — Sangeetha Pure Veg logo
+  client-logo-5.png     — Harvest Salad & Co logo
+  client-logo-6.png     — Ocean's 11 logo
+  client-logo-7.png     — Amoeba Sports Bar logo
+  client-logo-8.png     — Naaivedh logo
+  client-logo-9.png     — Sangeetha Veg Restaurant logo
+
+WORK PAGE
+  project-beer-cafe.jpg         — The Beer Cafe project
+  project-social-ecity.jpg      — Social E-City project
+  project-poee-co.jpg           — Poee & Co project
+  project-harvest.jpg           — Harvest Salad & Co project
+  project-sangeetha.jpg         — Sangeetha Pure Veg project
+  project-oceans-11.jpg         — Ocean's 11 project
+  project-amoeba.jpg            — Amoeba Sports Bar project
+  project-naaivedh.jpg          — Naaivedh project
+
+BLOG PAGES
+  blog-featured.jpg             — Blog listing: featured post image
+  blog-1-featured.jpg           — Blog Post 1: The FlatPack Revolution
+  blog-2-featured.jpg           — Blog Post 2: Designing for Success
+  blog-3-featured.jpg           — Blog Post 3: 5 Ways FlatPack Saves
+
+RECOMMENDED IMAGE SPECIFICATIONS
+---------------------------------
+  Hero backgrounds:    1920×1080px minimum, JPG, 80% quality
+  Page heroes:         1920×800px minimum, JPG, 80% quality
+  Project images:      1200×900px minimum, JPG, 85% quality
+  Product images:      800×600px minimum, JPG, 85% quality
+  Blog featured:       1200×630px (Open Graph compatible), JPG, 85% quality
+  Client logos:        SVG preferred, or PNG with transparent background, min 300px wide
+  Thumbnails:          400×400px, JPG or PNG
+
+NOTE: All image areas currently display gradient placeholders with Font Awesome icons.
+      Simply add image files with the names above and update the HTML accordingly:
+
+      BEFORE (placeholder):
+        <div class="img-cover-wrap">
+          <div class="img-icon"><i class="fa-solid fa-store"></i></div>
+        </div>
+
+      AFTER (real image):
+        <div class="img-cover-wrap">
+          <img src="images/project-beer-cafe.jpg" alt="The Beer Cafe fit-out by FlatPackCo">
+        </div>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXN8KBBFFP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TXN8KBBFFP');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '946267024111182');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=946267024111182&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <link rel="icon" type="image/png" href="images/favicon_fpco.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&amp;B Design &amp; Build Blogs | FlatPackCo</title>
+    <meta name="description" content="Practical guides and industry insights on restaurant fit-outs, flatpack construction, and design trends — from the FlatPackCo team.">
+    <link rel="canonical" href="https://www.flatpackco.com/blogs" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Featured blog post — large card */
+        .blog-featured {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
+            margin-bottom: 64px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .blog-featured:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+        .blog-featured-visual { height: 420px; }
+        .blog-featured-visual .img-cover-wrap { width: 100%; height: 100%; }
+        .blog-featured-visual .img-icon i { font-size: 3rem; }
+        .blog-featured-body { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; }
+        .blog-featured-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); background: var(--accent-light); padding: 4px 12px; border-radius: 50px; margin-bottom: 16px; width: fit-content; }
+        .blog-featured-body h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.35; margin-bottom: 14px; color: var(--text-dark); transition: color 0.2s; }
+        .blog-featured:hover .blog-featured-body h2 { color: var(--accent); }
+        .blog-featured-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 28px; }
+        .blog-featured-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+        .blog-featured-meta span { font-size: 0.8rem; color: var(--text-light); display: flex; align-items: center; gap: 5px; }
+        .blog-featured-meta span i { color: var(--accent); font-size: 0.75rem; }
+
+        /* Blog layout with sidebar */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr 310px;
+            gap: 52px;
+            align-items: start;
+        }
+        @media (max-width: 992px) {
+            .blog-featured { grid-template-columns: 1fr; }
+            .blog-featured-visual { height: 280px; }
+            .blog-featured-body { padding: 32px 28px; }
+            .blog-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="announcement-bar">
+    The F&amp;B Design-to-Build Platform — From concept to grand opening in <strong>as little as 15 days</strong>.
+    <a href="clients.html">See our work &rarr;</a>
+</div>
+
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="site-logo">
+            
+            <div class="logo">
+    <img src="images/logo.png" alt="FlatPackCo - The F&amp;B Design-to-Build Platform" class="logo-img">
+</div>
+        </a>
+
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" id="primary-nav">
+            <div class="nav-item">
+                <a href="index.html" class="nav-link ">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="about-us.html" class="nav-link ">About Us</a>
+            </div>
+            <div class="nav-item">
+                <a href="solutions.html" class="nav-link">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="nav-dropdown">
+                    <a href="counter.html"><i class="fa-solid fa-cash-register"></i> Counter Solutions</a>
+                    <a href="restaurant-cafe-wall-panelling.html"><i class="fa-solid fa-grip-lines-vertical"></i> Panelling &amp; Partitions</a>
+                    <a href="ceiling-design-for-bars-restaurants.html"><i class="fa-solid fa-layer-group"></i> Design Ceilings</a>
+                    <a href="movable-furniture-for-restaurant-cafe.html"><i class="fa-solid fa-cart-flatbed"></i> Movable Furniture</a>
+                    <a href="dine-in-furniture.html"><i class="fa-solid fa-chair"></i> Dine-In Furniture</a>
+                    <a href="floor-wall-solutions.html"><i class="fa-solid fa-border-top-left"></i> Floors &amp; Walls</a>
+                    <a href="solutions.html"><i class="fa-solid fa-ellipsis"></i> View All Solutions</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="clients.html" class="nav-link">Clients</a>
+            </div>
+            <div class="nav-item">
+                <a href="work.html" class="nav-link">Work</a>
+            </div>
+            <div class="nav-item">
+                <a href="blogs.html" class="nav-link active">Blogs</a>
+            </div>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+            <div class="header-phone">
+                <span>Call Us</span>
+                <a href="tel:+919082266324">+91 90822 66324</a>
+            </div>
+            <a href="contact-us.html" class="btn btn-primary">Talk To Us</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep"><i class="fa-solid fa-chevron-right fa-xs"></i></span>
+            <span class="crumb-current">Blogs</span>
+        </div>
+        <h1>Insights, Trends &amp;<br>Fit-Out Expertise</h1>
+        <p>Industry knowledge, design inspiration, and practical guides from the FlatPackCo team — helping you make smarter decisions about your next space.</p>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section class="section">
+    <div class="container">
+
+        <!-- Featured Post -->
+        <a href="flatpack-construction-debunking-myths-and-addressing-concerns-in-restaurant-design.html" class="blog-featured fade-up blog-filter-item" data-category="Industry Insight">
+            <div class="blog-featured-visual">
+                <div class="img-cover-wrap">
+                    <img src="images/Blogs/Flatpack Construction Debunking Myths and Addressing Concerns in Restaurant Design/3.png" alt="Flatpack Construction: Debunking Myths and Addressing Concerns in Restaurant Design" loading="lazy">
+                </div>
+            </div>
+            <div class="blog-featured-body">
+                <span class="blog-featured-tag"><i class="fa-solid fa-star"></i> Featured</span>
+                <div class="blog-featured-meta">
+                    <span><i class="fa-solid fa-tag"></i> Industry Insight</span>
+                    <span><i class="fa-regular fa-calendar"></i> January 2025</span>
+                    <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                </div>
+                <h2>Flatpack Construction: Debunking Myths and Addressing Concerns in Restaurant Design</h2>
+                <p>Flatpack construction has a reputation problem. We separate fact from fiction on quality, customisation, scale, and durability — and show why it's a practical solution, not a compromise, for restaurant and F&amp;B fit-outs.</p>
+                <span class="btn-link">Read the Full Article <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- Two-column: blog grid + sidebar -->
+        <div class="blog-layout">
+            <!-- Main blog grid -->
+            <div>
+                <div class="section-header">
+                    <span class="section-tag">Latest Articles</span>
+                    <h2 class="section-title">From the FlatPackCo Blog</h2>
+                </div>
+
+                <p id="blogFilterStatus" class="blog-filter-status" style="display:none;">Showing posts in <strong></strong> — <a href="blogs.html">View all articles</a></p>
+
+                <div class="grid-2" id="blogGrid" style="gap:28px;">
+                    <!-- Post 13 -->
+                    <a href="restaurant-rollout-guide.html" class="blog-card fade-up blog-filter-item" data-category="Strategy">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Restaurant Roll Out/Restaurant Design and Build.png" alt="Restaurant Rollout Guide: How to Scale Multiple Outlets Consistently" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Strategy</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> September 2026</span>
+                            </div>
+                            <h3>Restaurant Rollout Guide: How to Scale Multiple Outlets Consistently</h3>
+                            <p>Scalable design systems, standardised components, rollout kits, procurement, manufacturing, and quality control across multiple outlets.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 12 -->
+                    <a href="restaurant-wall-panelling-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Wall Panelling/Restaurant Wall Design.png" alt="Restaurant Wall Panelling Guide: Materials, Design &amp; Practical Considerations" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> September 2026</span>
+                            </div>
+                            <h3>Restaurant Wall Panelling Guide: Materials, Design &amp; Practical Considerations</h3>
+                            <p>Full-height, wainscoting, feature, acoustic and waterproof panels, materials, and how panelling fits into Restaurant Design &amp; Build.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 11 -->
+                    <a href="restaurant-facade-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Façade Design/Restaurant Façade Design.png" alt="Restaurant Façade Guide: Creating a Strong First Impression" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> September 2026</span>
+                            </div>
+                            <h3>Restaurant Façade Guide: Creating a Strong First Impression</h3>
+                            <p>Entrance design, cladding, glazing, signage, lighting, canopies, and how façade planning fits into Restaurant Design &amp; Build.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 10 -->
+                    <a href="restaurant-signage-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Restaurant Signage/Restaurant Signage Solutions.png" alt="Restaurant Signage Guide: Planning Signage That Works for Your F&amp;B Space" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> September 2026</span>
+                            </div>
+                            <h3>Restaurant Signage Guide: Planning Signage That Works for Your F&amp;B Space</h3>
+                            <p>Exterior and wayfinding signage, materials, lighting, and how signage fits into Restaurant Design &amp; Build.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 9 -->
+                    <a href="restaurant-flooring-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/flooring solutions/Restaurant Floor Tiles.png" alt="Restaurant Flooring Guide: How to Choose the Right Flooring for Your Restaurant" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            </div>
+                            <h3>Restaurant Flooring Guide: How to Choose the Right Flooring for Your Restaurant</h3>
+                            <p>Flooring materials, slip resistance, durability, maintenance, flooring by area, and how flooring fits into Restaurant Design &amp; Build.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 8 -->
+                    <a href="restaurant-furniture-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Restaurant Furniture/Commercial Restaurant Furniture.png" alt="Restaurant Furniture Guide: How to Choose the Right Furniture for Your Restaurant" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            </div>
+                            <h3>Restaurant Furniture Guide: How to Choose the Right Furniture for Your Restaurant</h3>
+                            <p>Furniture types, materials, comfort, durability, layout planning, custom furniture, and how furniture fits into Restaurant Design &amp; Build.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 7 -->
+                    <a href="restaurant-lighting-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Restaurant Lighting/Restaurant Lighting (1).png" alt="Restaurant Lighting Guide: How the Right Lighting Transforms Your Restaurant" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            </div>
+                            <h3>Restaurant Lighting Guide: How the Right Lighting Transforms Your Restaurant</h3>
+                            <p>Ambient, task, accent, and decorative lighting, colour temperature, energy efficiency, and how lighting fits into Restaurant Design &amp; Build.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 6 -->
+                    <a href="commercial-kitchen-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Commercial Kitchen/Commercial Kitchen (1).png" alt="Commercial Kitchen Guide: Everything You Need to Know Before Planning a Restaurant Kitchen" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            </div>
+                            <h3>Commercial Kitchen Guide: Everything You Need to Know Before Planning a Restaurant Kitchen</h3>
+                            <p>Planning, key work zones, layout types, essential equipment, ventilation, common mistakes, and how a commercial kitchen fits into Restaurant Design &amp; Build.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 5 -->
+                    <a href="restaurant-fit-out-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Restaurant Fit-Out/Restaurant Fit-Out Guide.png" alt="Restaurant Fit-Out Guide: Everything You Need to Know Before Building Your Restaurant" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            </div>
+                            <h3>Restaurant Fit-Out Guide: Everything You Need to Know Before Building Your Restaurant</h3>
+                            <p>Planning, key elements, the six-step fit-out process, timelines, common mistakes, and tips for a successful Restaurant Design &amp; Build project.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 4 -->
+                    <a href="restaurant-ceiling-guide.html" class="blog-card fade-up blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Ceiling Solutions/Restaurant Ceiling Design.png" alt="Restaurant Ceiling Guide: How Ceiling Design Enhances Restaurant Interiors" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> August 2026</span>
+                            </div>
+                            <h3>Restaurant Ceiling Guide: How Ceiling Design Enhances Restaurant Interiors</h3>
+                            <p>Gypsum, exposed, wooden, and metal ceilings — how ceiling design shapes lighting, acoustics, ventilation, and brand identity.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 3 -->
+                    <a href="explore-the-latest-restaurant-interior-design-trends.html" class="blog-card fade-up delay-1 blog-filter-item" data-category="Design">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/Explore the Latest Restaurant Interior Design Trends/fpco (1).jpeg" alt="Explore the Latest Restaurant Interior Design Trends" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Design</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> October 2025</span>
+                            </div>
+                            <h3>Explore the Latest Restaurant Interior Design Trends</h3>
+                            <p>From biophilic design to open kitchens and smart technology — the trends shaping memorable, competitive dining spaces.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Post 2 -->
+                    <a href="the-hidden-costs-of-not-choosing-flatpack-for-restaurant-construction.html" class="blog-card fade-up blog-filter-item" data-category="Strategy">
+                        <div class="blog-card-img">
+                            <div class="img-cover-wrap">
+                                <img src="images/Blogs/The Hidden Costs of Not Choosing Flatpack for Restaurant Construction/1.png" alt="The Hidden Costs of Not Choosing Flatpack for Restaurant Construction" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-cat">Strategy</span>
+                                <span class="blog-date"><i class="fa-regular fa-calendar"></i> January 2025</span>
+                            </div>
+                            <h3>The Hidden Costs of Not Choosing Flatpack for Restaurant Construction</h3>
+                            <p>Sticking with traditional construction can carry hidden financial, operational, and strategic costs — here's what's really at stake.</p>
+                            <span class="btn-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="blogEmptyState" class="blog-empty-state" style="display:none;">
+                    <p>No posts in this category yet — check back soon, or <a href="blogs.html">view all articles</a>.</p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside style="display:flex; flex-direction:column; gap:28px;">
+                <!-- Categories -->
+                <div class="sidebar-widget fade-in delay-2">
+                    <h3 class="sidebar-widget-title">Categories</h3>
+                    <div>
+                        <a href="blogs.html" class="cat-list-item">All Posts <span>13</span></a>
+                        <a href="blogs.html?cat=Industry+Insight" class="cat-list-item" data-cat="Industry Insight">Industry Insight <span>1</span></a>
+                        <a href="blogs.html?cat=Strategy" class="cat-list-item" data-cat="Strategy">Strategy <span>2</span></a>
+                        <a href="blogs.html?cat=Design" class="cat-list-item" data-cat="Design">Design <span>10</span></a>
+                    </div>
+                </div>
+
+                <!-- Recent Posts -->
+                <div class="sidebar-widget fade-in delay-3">
+                    <h3 class="sidebar-widget-title">Recent Posts</h3>
+                    <a href="restaurant-rollout-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Restaurant Roll Out/Restaurant Design and Build.png" alt="Restaurant Rollout Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Rollout Guide</h6>
+                            <span>September 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-wall-panelling-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Wall Panelling/Restaurant Wall Design.png" alt="Restaurant Wall Panelling Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Wall Panelling Guide</h6>
+                            <span>September 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-facade-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Façade Design/Restaurant Façade Design.png" alt="Restaurant Façade Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Façade Guide</h6>
+                            <span>September 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-signage-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Restaurant Signage/Restaurant Signage Solutions.png" alt="Restaurant Signage Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Signage Guide</h6>
+                            <span>September 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-flooring-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/flooring solutions/Restaurant Floor Tiles.png" alt="Restaurant Flooring Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Flooring Guide</h6>
+                            <span>August 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-furniture-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Restaurant Furniture/Commercial Restaurant Furniture.png" alt="Restaurant Furniture Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Furniture Guide</h6>
+                            <span>August 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-lighting-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Restaurant Lighting/Restaurant Lighting (1).png" alt="Restaurant Lighting Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Lighting Guide</h6>
+                            <span>August 2026</span>
+                        </div>
+                    </a>
+                    <a href="commercial-kitchen-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Commercial Kitchen/Commercial Kitchen (1).png" alt="Commercial Kitchen Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Commercial Kitchen Guide</h6>
+                            <span>August 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-fit-out-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Restaurant Fit-Out/Restaurant Fit-Out Guide.png" alt="Restaurant Fit-Out Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Fit-Out Guide</h6>
+                            <span>August 2026</span>
+                        </div>
+                    </a>
+                    <a href="restaurant-ceiling-guide.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Ceiling Solutions/Restaurant Ceiling Design.png" alt="Restaurant Ceiling Guide" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Restaurant Ceiling Guide</h6>
+                            <span>August 2026</span>
+                        </div>
+                    </a>
+                    <a href="explore-the-latest-restaurant-interior-design-trends.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/Explore the Latest Restaurant Interior Design Trends/fpco (1).jpeg" alt="Explore the Latest Restaurant Interior Design Trends" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>Explore the Latest Restaurant Interior Design Trends</h6>
+                            <span>October 2025</span>
+                        </div>
+                    </a>
+                    <a href="the-hidden-costs-of-not-choosing-flatpack-for-restaurant-construction.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><img src="images/Blogs/The Hidden Costs of Not Choosing Flatpack for Restaurant Construction/1.png" alt="The Hidden Costs of Not Choosing Flatpack" style="width:100%;height:100%;object-fit:cover;"></div>
+                        <div class="recent-post-info">
+                            <h6>The Hidden Costs of Not Choosing Flatpack</h6>
+                            <span>January 2025</span>
+                        </div>
+                    </a>
+                    <a href="flatpack-construction-debunking-myths-and-addressing-concerns-in-restaurant-design.html" class="recent-post" style="text-decoration:none;">
+                        <div class="recent-post-thumb"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="recent-post-info">
+                            <h6>Flatpack Construction: Debunking Myths</h6>
+                            <span>January 2025</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Newsletter mini -->
+                <div class="sidebar-widget fade-in" style="background:var(--primary); border-color:transparent;">
+                    <h3 class="sidebar-widget-title" style="color:var(--accent); border-color:var(--accent);">Stay in the Loop</h3>
+                    <p style="color:rgba(255,255,255,0.62); font-size:0.875rem; margin-bottom:16px;">Get new articles and industry insights delivered straight to your inbox.</p>
+                    <form onsubmit="return false;" style="display:flex; flex-direction:column; gap:10px;">
+                        <input type="email" class="newsletter-input" placeholder="Your email" style="border-radius:var(--radius); border-right:1px solid var(--border);">
+                        <button type="submit" class="btn btn-primary" style="justify-content:center;">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- CTA widget -->
+                <div class="sidebar-widget fade-in" style="background:var(--accent); border-color:transparent; text-align:center;">
+                    <i class="fa-solid fa-bolt" style="font-size:1.8rem; color:rgba(255,255,255,0.7); display:block; margin-bottom:12px;"></i>
+                    <h4 style="color:#fff; font-size:1rem; margin-bottom:8px;">Ready to Start Your Project?</h4>
+                    <p style="color:rgba(255,255,255,0.8); font-size:0.86rem; margin-bottom:18px;">Talk to our team today and get a project plan within 48 hours.</p>
+                    <a href="mailto:info@flatpackco.com" class="btn btn-dark" style="width:100%; justify-content:center;">Get in Touch</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-inner">
+            <div class="newsletter-text">
+                <h3>Never Miss an Insight</h3>
+                <p>Design trends, industry guides, and project spotlights — delivered monthly.</p>
+            </div>
+            <form class="newsletter-form" onsubmit="return false;">
+                <input type="email" class="newsletter-input" placeholder="Your email address">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <div class="footer-logo-wrap">
+    <img src="images/logo-white.png" alt="FlatPackCo" class="footer-logo-img">
+</div>
+                <p>The F&amp;B Design-to-Build Platform. From concept to grand opening.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/flatpackco/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/flatpackco" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-widget">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="solutions.html"><i class="fa-solid fa-chevron-right"></i> Solutions</a></li>
+                    <li><a href="work.html"><i class="fa-solid fa-chevron-right"></i> Our Work</a></li>
+                    <li><a href="clients.html"><i class="fa-solid fa-chevron-right"></i> Clients</a></li>
+                    <li><a href="blogs.html"><i class="fa-solid fa-chevron-right"></i> Blogs</a></li>
+                    <li><a href="restaurant-design-and-build.html"><i class="fa-solid fa-chevron-right"></i> Design & Build Solutions</a></li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div class="footer-widget">
+                <h5>Solutions</h5>
+                <ul class="footer-links">
+                    <li><a href="counter.html"><i class="fa-solid fa-chevron-right"></i> Counter Solutions</a></li>
+                    <li><a href="restaurant-cafe-wall-panelling.html"><i class="fa-solid fa-chevron-right"></i> Panelling &amp; Partitions</a></li>
+                    <li><a href="ceiling-design-for-bars-restaurants.html"><i class="fa-solid fa-chevron-right"></i> Design Ceilings</a></li>
+                    <li><a href="movable-furniture-for-restaurant-cafe.html"><i class="fa-solid fa-chevron-right"></i> Movable Furniture</a></li>
+                    <li><a href="dine-in-furniture.html"><i class="fa-solid fa-chevron-right"></i> Dine-In Furniture</a></li>
+                    <li><a href="floor-wall-solutions.html"><i class="fa-solid fa-chevron-right"></i> Floors &amp; Walls</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-widget">
+                <h5>Contact Us</h5>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p><strong>Phone</strong><br>+91 90822 66324</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p><strong>Email</strong><br>info@flatpackco.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><strong>Location</strong><br>Vasudev Chamber-B, 21, Old Nagardas Cross Rd, Andheri East, Mumbai, Maharashtra 400069</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <p><strong>Hours</strong><br>Mon–Fri, 9am–7pm · Sat, 10am–5pm</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 FlatPackCo. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="whatsapp-float">
+    <a href="https://wa.me/919082266324" class="whatsapp-btn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i><span>Chat on WhatsApp</span>
+    </a>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

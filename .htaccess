@@ -1,0 +1,58 @@
+RewriteEngine On
+RewriteBase /
+
+# Force www on all requests
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Old project-page URLs -> new consistent lowercase-hyphenated slugs
+# NOTE: the Naaivedh rule is intentionally case-sensitive (no NC flag).
+# The only difference between the old and new URL is letter case, so
+# a case-insensitive match here would also match the new URL itself
+# and create an infinite redirect loop.
+RewriteRule ^the_beer_cafe\.html$ /the-beer-cafe-restaurant-fit-out [R=301,L,NC]
+RewriteRule ^Naaivedh\.html$ /naaivedh-sweet-shop-design-and-build [R=301,L]
+RewriteRule ^poie-and-co\.html$ /poee-and-co-goa-bar-fit-out [R=301,L,NC]
+
+# Old URLs -> new URLs
+Redirect 301 /search https://www.flatpackco.com/blogs
+Redirect 301 /aboutus https://www.flatpackco.com/about-us
+Redirect 301 /panelling.html https://www.flatpackco.com/restaurant-cafe-wall-panelling
+Redirect 301 /design-ceilings.html https://www.flatpackco.com/ceiling-design-for-bars-restaurants
+Redirect 301 /movable-furniture.html https://www.flatpackco.com/movable-furniture-for-restaurant-cafe
+Redirect 301 /floors-walls.html https://www.flatpackco.com/floor-wall-solutions
+Redirect 301 /kiosk.html https://www.flatpackco.com/kiosk-design-and-build-services
+Redirect 301 /facade.html https://www.flatpackco.com/facade-design-restaurant
+RewriteRule ^fa%C3%A7ade-design\.html$ /facade-design-restaurant [R=301,L,NC]
+Redirect 301 /commercial-kitchen.html https://www.flatpackco.com/commercial-kitchen-equipment-for-restaurant-and-bar
+Redirect 301 /lighting.html https://www.flatpackco.com/lighting-design-for-commercial-spaces
+Redirect 301 /the-beer-cafe.html https://www.flatpackco.com/the-beer-cafe-restaurant-fit-out
+Redirect 301 /social-e-city.html https://www.flatpackco.com/social-e-city-bangalore-design-and-build
+Redirect 301 /poee-and-co.html https://www.flatpackco.com/poee-and-co-goa-bar-fit-out
+Redirect 301 /harvest-salad-co.html https://www.flatpackco.com/harvest-salad-co-qsr-design
+Redirect 301 /sangeetha-restaurant.html https://www.flatpackco.com/sangeetha-restaurant-restaurant-fit-out
+Redirect 301 /amoeba-sports-bar.html https://www.flatpackco.com/amoeba-sports-bar-design-and-build
+Redirect 301 /naaivedh.html https://www.flatpackco.com/naaivedh-sweet-shop-design-and-build
+Redirect 301 /amoeba-sports-bar-design-and-build-solutions.html https://www.flatpackco.com/amoeba-sports-bar-design-and-build
+Redirect 301 /poee-and-co-goa-bar-fit-out-solutions.html https://www.flatpackco.com/poee-and-co-goa-bar-fit-out
+Redirect 301 /social-e-city-bangalore-design-build-solutions.html https://www.flatpackco.com/social-e-city-bangalore-design-and-build
+Redirect 301 /naaivedh-sweet-shop-design-build.html https://www.flatpackco.com/naaivedh-sweet-shop-design-and-build
+
+# Hide .html extension: if a browser directly requests a *.html URL,
+# send it to the extension-less version so the address bar never shows .html
+RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally serve the matching .html file for the extension-less URL
+# (the browser URL is left untouched)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php83” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php83 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

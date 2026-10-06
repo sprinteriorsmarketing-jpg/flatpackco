@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXN8KBBFFP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TXN8KBBFFP');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '946267024111182');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=946267024111182&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <link rel="icon" type="image/png" href="images/favicon_fpco.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant, Café &amp; Bar Projects — Our Work | FlatPackCo</title>
+    <meta name="description" content="Real fit-outs across restaurants, cafés, bars, and QSRs — delivered concept to grand opening through The FlatPack Method.">
+    <meta name="keywords" content="Turnkey Restaurant Projects, End-to-End Design &amp; Build, Commercial Interior Fit-Out">
+    <link rel="canonical" href="https://www.flatpackco.com/work" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        /* =====================================================
+           SCROLL PORTFOLIO — page-specific styles only.
+           All brand tokens (colors, fonts, spacing) come from
+           css/style.css via :root variables.
+           ===================================================== */
+
+        /* Sticky offset = header height (80px from style.css) */
+        :root { --hdr: 80px; }
+
+        /* Full-bleed split container */
+        .scroll-portfolio {
+            display: flex;
+            align-items: stretch;
+            border-top: 1px solid var(--border);
+        }
+
+        /* --------------------------------------------------
+           LEFT — sticky info panel
+           -------------------------------------------------- */
+        .sp-info {
+            width: 38%;
+            flex-shrink: 0;
+            position: sticky;
+            top: var(--hdr);
+            height: calc(100vh - var(--hdr));
+            background: var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2.5rem 3rem 3rem;
+            overflow: hidden;
+            border-right: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .sp-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.28);
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            margin-bottom: 2.5rem;
+        }
+
+        .sp-data {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .sp-index {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .sp-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 2.8vw, 3rem);
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--white);
+        }
+
+        .sp-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.75rem;
+        }
+
+        .sp-cat-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: rgba(32,76,248,0.18);
+            border: 1px solid rgba(32,76,248,0.25);
+            padding: 3px 10px;
+            border-radius: 50px;
+        }
+
+        .sp-loc {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.45);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sp-loc i { font-size: 0.6rem; }
+
+        /* Prev / Next arrow buttons */
+        .sp-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .sp-arrow {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: transparent;
+            color: rgba(255,255,255,0.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: var(--radius);
+            font-size: 0.72rem;
+            transition: var(--transition);
+        }
+
+        .sp-arrow:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(32,76,248,0.35);
+        }
+
+        .sp-arrow:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Progress bar */
+        .sp-progress { margin-top: 1.5rem; }
+
+        .sp-progress-track {
+            width: 100%;
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .sp-progress-fill {
+            position: absolute;
+            inset: 0 auto 0 0;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sp-progress-nums {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.4rem;
+        }
+
+        .sp-progress-nums span {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.22);
+        }
+
+        /* --------------------------------------------------
+           RIGHT — scrollable project list
+           -------------------------------------------------- */
+        .sp-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+        }
+
+        .sp-item {
+            height: calc(100vh - var(--hdr));
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: var(--hdr);
+        }
+
+        .sp-item:last-child { border-bottom: none; }
+
+        /* Project image */
+        .sp-img {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sp-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+
+        .sp-item:hover .sp-img img { transform: scale(1.04); }
+
+        /* Hover overlay — gradient + project detail */
+        .sp-overlay {
+            position: absolute;
+            bottom: 64px; /* above footer bar */
+            left: 0;
+            right: 0;
+            padding: 32px 28px 20px;
+            background: linear-gradient(to top, rgba(7,13,26,0.9) 0%, rgba(7,13,26,0.3) 70%, transparent 100%);
+            opacity: 0;
+            transform: translateY(8px);
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .sp-item:hover .sp-overlay { opacity: 1; transform: translateY(0); }
+
+        .sp-overlay-cat {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+
+        .sp-overlay-name {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .sp-overlay-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 8px 16px;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .sp-overlay-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Bottom bar (always visible) */
+        .sp-bar {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.75rem;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            transition: background 0.35s ease;
+            position: relative;
+            z-index: 3;
+        }
+
+        .sp-bar-name {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: color 0.35s ease;
+        }
+
+        .sp-bar-tags {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sp-bar-tags .portfolio-cat { margin: 0; }
+        .sp-bar-tags .bull { color: var(--text-light); font-size: 0.5rem; }
+
+        .sp-bar-cta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            transition: color 0.35s ease;
+        }
+
+        /* Active item: inverts the footer bar to accent blue */
+        .sp-item.is-active .sp-bar { background: var(--accent); }
+        .sp-item.is-active .sp-bar-name  { color: var(--white); }
+        .sp-item.is-active .sp-bar-tags .portfolio-cat { color: rgba(255,255,255,0.65); }
+        .sp-item.is-active .sp-bar-tags .bull { color: rgba(255,255,255,0.3); }
+        .sp-item.is-active .sp-bar-cta   { color: rgba(255,255,255,0.65); }
+
+        /* --------------------------------------------------
+           RESPONSIVE
+           -------------------------------------------------- */
+
+        /* Tablet */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .sp-info {
+                width: 36%;
+                padding: 2rem 2rem 2.5rem;
+            }
+            .sp-title { font-size: clamp(1.5rem, 2.5vw, 2.4rem); }
+        }
+
+        /* Mobile: collapse left panel, single-column list */
+        @media (max-width: 768px) {
+            .sp-info    { display: none; }
+            .sp-list    { width: 100%; }
+            .scroll-portfolio { flex-direction: column; }
+
+            .sp-item {
+                height: calc(100vh - var(--hdr));
+                min-height: 360px;
+            }
+
+            .sp-bar {
+                flex-wrap: wrap;
+                row-gap: 0.25rem;
+                padding: 0.875rem 1.25rem;
+            }
+
+            .sp-bar-cta { display: none; }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .sp-img img,
+            .sp-progress-fill { transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- =====================================================
+     ANNOUNCEMENT BAR
+     ===================================================== -->
+<div class="announcement-bar">
+    The F&amp;B Design-to-Build Platform — From concept to grand opening in <strong>as little as 15 days</strong>.
+    <a href="clients.html">See who trusts us &rarr;</a>
+</div>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="site-logo">
+            <div class="logo">
+                <img src="images/logo.png" alt="FlatPackCo - The F&amp;B Design-to-Build Platform" class="logo-img">
+            </div>
+        </a>
+
+        <nav class="primary-nav" id="primary-nav">
+            <div class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="about-us.html" class="nav-link">About Us</a>
+            </div>
+            <div class="nav-item">
+                <a href="solutions.html" class="nav-link">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="nav-dropdown">
+                    <a href="counter.html"><i class="fa-solid fa-cash-register"></i> Counter Solutions</a>
+                    <a href="restaurant-cafe-wall-panelling.html"><i class="fa-solid fa-grip-lines-vertical"></i> Panelling &amp; Partitions</a>
+                    <a href="ceiling-design-for-bars-restaurants.html"><i class="fa-solid fa-layer-group"></i> Design Ceilings</a>
+                    <a href="movable-furniture-for-restaurant-cafe.html"><i class="fa-solid fa-cart-flatbed"></i> Movable Furniture</a>
+                    <a href="dine-in-furniture.html"><i class="fa-solid fa-chair"></i> Dine-In Furniture</a>
+                    <a href="floor-wall-solutions.html"><i class="fa-solid fa-border-top-left"></i> Floors &amp; Walls</a>
+                    <a href="solutions.html"><i class="fa-solid fa-ellipsis"></i> View All Solutions</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="clients.html" class="nav-link">Clients</a>
+            </div>
+            <div class="nav-item">
+                <a href="work.html" class="nav-link active">Work</a>
+            </div>
+            <div class="nav-item">
+                <a href="blogs.html" class="nav-link">Blogs</a>
+            </div>
+        </nav>
+
+        <div class="header-actions">
+            <div class="header-phone">
+                <span>Call Us</span>
+                <a href="tel:+919082266324">+91 90822 66324</a>
+            </div>
+            <a href="mailto:info@flatpackco.com" class="btn btn-primary">Talk To Us</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- =====================================================
+     PAGE HERO
+     ===================================================== -->
+
+
+<!-- =====================================================
+     SCROLL PORTFOLIO — split-screen scroll layout
+     ===================================================== -->
+<div class="scroll-portfolio" id="scrollPortfolio">
+
+    <!-- LEFT: sticky info panel (desktop) -->
+    <aside class="sp-info" role="complementary" aria-label="Active project details">
+
+        
+
+        <div class="sp-data">
+            <p class="sp-index" id="spIndex" aria-live="polite">01 / 11</p>
+
+            <h2 class="sp-title" id="spTitle" aria-live="polite">DDUCKPIN</h2>
+
+            <div class="sp-meta" id="spMeta" aria-live="polite">
+                <span class="sp-cat-badge" id="spCat">Bowling Bistro</span>
+                <span class="sp-loc" id="spLoc">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Malad, Mumbai
+                </span>
+            </div>
+
+            <nav class="sp-nav" aria-label="Navigate between projects">
+                <button class="sp-arrow" id="spPrev" aria-label="Previous project">
+                    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                </button>
+                <button class="sp-arrow" id="spNext" aria-label="Next project">
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </button>
+            </nav>
+
+            <div class="sp-progress">
+                <div
+                    class="sp-progress-track"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="10"
+                    aria-label="Portfolio scroll progress"
+                    id="spProgressTrack"
+                >
+                    <div class="sp-progress-fill" id="spProgressFill" style="width: 9%;"></div>
+                </div>
+                <div class="sp-progress-nums" aria-hidden="true">
+                    <span id="spCurNum">01</span>
+                    <span id="spTotNum">11</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT: scrollable list of projects -->
+    <ol class="sp-list" aria-label="Portfolio projects">
+
+        <!-- 01 — DDUCKPIN -->
+        <li
+            class="sp-item is-active"
+            id="sp-0"
+            data-index="0"
+            data-category="bar"
+            data-title="DDUCKPIN"
+            data-cat="Bowling Bistro"
+            data-loc="Malad, Mumbai"
+        >
+            <div class="sp-img">
+                <img src="images/projects/Dduckpin/dduckpin-bowling-lanes-wide.png" alt="DDUCKPIN — Bowling Bistro Fit-Out, Malad, Mumbai" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Bowling Bistro &bull; Malad, Mumbai</p>
+                <p class="sp-overlay-name">DDUCKPIN</p>
+                <a href="dduckpin-bowling-bistro-fit-out.html" class="sp-overlay-btn" data-popup="dduckpin-bowling-bistro-fit-out.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">DDUCKPIN</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Bowling Bistro</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Malad, Mumbai</span>
+                </div>
+                <a href="dduckpin-bowling-bistro-fit-out.html" class="sp-bar-cta" data-popup="dduckpin-bowling-bistro-fit-out.html">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+        <!-- 02 — The Beer Cafe -->
+        <li
+            class="sp-item"
+            id="sp-1"
+            data-index="1"
+            data-category="bar"
+            data-title="The Beer Cafe"
+            data-cat="Bar"
+            data-loc="Mumbai"
+        >
+            <div class="sp-img">
+                <img src="images/projects/the_beer_cafe/1.jpg" alt="The Beer Cafe — Bar & Restaurant Fit-Out, Mumbai" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Bar &bull; Mumbai</p>
+                <p class="sp-overlay-name">The Beer Cafe — Bar &amp; Restaurant Fit-Out</p>
+                <a href="the-beer-cafe-restaurant-fit-out.html" class="sp-overlay-btn" data-popup="the-beer-cafe-restaurant-fit-out.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">The Beer Cafe</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Bar</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Mumbai</span>
+                </div>
+                <a href="the-beer-cafe-restaurant-fit-out.html" class="sp-bar-cta" data-popup="the-beer-cafe-restaurant-fit-out.html">
+    View <i class="fa-solid fa-arrow-right fa-xs"></i>
+</a>
+            </div>
+        </li>
+
+        <!-- 03 — Social E-City -->
+        <li
+            class="sp-item"
+            id="sp-2"
+            data-index="2"
+            data-category="restaurant"
+            data-title="Social — E-City"
+            data-cat="Social Dining"
+            data-loc="Bangalore"
+        >
+            <div class="sp-img">
+                <img src="images/projects/social_e_city/1.jpg" alt="Social — E-City, Bangalore" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Social Dining &bull; Bangalore</p>
+                <p class="sp-overlay-name">Social — E-City</p>
+                <a href="social-e-city-bangalore-design-and-build.html" class="sp-overlay-btn" data-popup="social-e-city-bangalore-design-and-build.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">Social — E-City</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Social Dining</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Bangalore</span>
+                </div>
+                <a href="social-e-city-bangalore-design-and-build.html" class="sp-bar-cta" data-popup="social-e-city-bangalore-design-and-build.html">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+        <!-- 04 — Poee & Co -->
+        <li
+            class="sp-item"
+            id="sp-3"
+            data-index="3"
+            data-category="cafe"
+            data-title="Poee &amp; Co"
+            data-cat="Café"
+            data-loc="Goa"
+        >
+            <div class="sp-img">
+                <img src="images/projects/poee_co/1.jpg" alt="Poee & Co — Café Fit-Out, Goa" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Café &bull; Goa</p>
+                <p class="sp-overlay-name">Poee &amp; Co</p>
+                <a href="poee-and-co-goa-bar-fit-out.html" class="sp-overlay-btn" data-popup="poee-and-co-goa-bar-fit-out.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">Poee &amp; Co</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Café</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Goa</span>
+                </div>
+                <a href="poee-and-co-goa-bar-fit-out.html" class="sp-bar-cta" data-popup="poee-and-co-goa-bar-fit-out.html">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+        <!-- 05 — Harvest Salad & Co -->
+        <li
+            class="sp-item"
+            id="sp-4"
+            data-index="4"
+            data-category="restaurant"
+            data-title="Harvest Salad &amp; Co"
+            data-cat="Restaurant"
+            data-loc="Bengaluru"
+        >
+            <div class="sp-img">
+                <img src="images/projects/harvest_saladCo/1.jpg" alt="Harvest Salad & Co — Restaurant Fit-Out, Bengaluru" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Restaurant &bull; Bengaluru</p>
+                <p class="sp-overlay-name">Harvest Salad &amp; Co</p>
+                <a href="harvest-salad-co-qsr-design.html" class="sp-overlay-btn" data-popup="harvest-salad-co-qsr-design.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">Harvest Salad &amp; Co</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Restaurant</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Bengaluru</span>
+                </div>
+                <a href="harvest-salad-co-qsr-design.html" class="sp-bar-cta" data-popup="harvest-salad-co-qsr-design.html">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+        <!-- 06 — Sangeetha Pure Veg Restaurant -->
+        <li
+            class="sp-item"
+            id="sp-5"
+            data-index="5"
+            data-category="restaurant"
+            data-title="Sangeetha Pure Veg Restaurant"
+            data-cat="Restaurant"
+            data-loc="Chennai"
+        >
+            <div class="sp-img">
+                <img src="images/projects/Sangeeta%20restaurant/thumbnail.jpg" alt="Sangeetha Pure Veg Restaurant, Chennai" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Restaurant &bull; Chennai</p>
+                <p class="sp-overlay-name">Sangeetha Pure Veg Restaurant</p>
+                <a href="sangeetha-restaurant-restaurant-fit-out.html" class="sp-overlay-btn" data-popup="sangeetha-restaurant-restaurant-fit-out.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">Sangeetha Pure Veg Restaurant</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Restaurant</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Chennai</span>
+                </div>
+                <a href="sangeetha-restaurant-restaurant-fit-out.html" class="sp-bar-cta" data-popup="sangeetha-restaurant-restaurant-fit-out.html">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+        <!-- 07 — Ocean's 11 -->
+        <li
+            class="sp-item"
+            id="sp-6"
+            data-index="6"
+            data-category="bar"
+            data-title="Ocean's 11"
+            data-cat="Restaurant &amp; Bar"
+            data-loc="Mumbai"
+        >
+            <div class="sp-img">
+                <img src="images/projects/oceans_11/1.jpg" alt="Ocean's 11 — Restaurant & Bar Fit-Out" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Restaurant &bull; Bar &bull; Mumbai</p>
+                <p class="sp-overlay-name">Ocean's 11</p>
+                <a href="ocean-11-restaurant.html" class="sp-overlay-btn" data-popup="ocean-11-restaurant.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">Ocean's 11</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Restaurant &amp; Bar</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Mumbai</span>
+                </div>
+                <a href="ocean-11-restaurant.html" class="sp-bar-cta" data-popup="ocean-11-restaurant.html">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+        <!-- 08 — Amoeba Sports Bar -->
+        <li
+            class="sp-item"
+            id="sp-7"
+            data-index="7"
+            data-category="bar"
+            data-title="Amoeba Sports Bar"
+            data-cat="Sports Bar"
+            data-loc="Mumbai"
+        >
+            <div class="sp-img">
+                <img src="images/projects/amoeba_sports_bar/1.jpg" alt="Amoeba Sports Bar — Sports Bar Fit-Out, Mumbai" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Sports Bar &bull; Mumbai</p>
+                <p class="sp-overlay-name">Amoeba Sports Bar</p>
+                <a href="amoeba-sports-bar-design-and-build.html" class="sp-overlay-btn">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">Amoeba Sports Bar</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Sports Bar</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Mumbai</span>
+                </div>
+                 <a href="amoeba-sports-bar-design-and-build.html" class="sp-bar-cta" data-popup="amoeba-sports-bar-design-and-build.html"></a>
+                <span class="sp-bar-cta" aria-hidden="true">View <i class="fa-solid fa-arrow-right fa-xs"></i></span>
+            </div>
+        </li>
+
+        <!-- 09 — Naaivedh -->
+        <li
+            class="sp-item"
+            id="sp-8"
+            data-index="8"
+            data-category="restaurant"
+            data-title="Naaivedh"
+            data-cat="Restaurant"
+            data-loc=""
+        >
+            <div class="sp-img">
+                <img src="images/projects/naaivedh/1.jpg" alt="Naaivedh — Restaurant Fit-Out" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Restaurant</p>
+                <p class="sp-overlay-name">Naaivedh</p>
+                <a href="naaivedh-sweet-shop-design-and-build.html" class="sp-overlay-btn" data-popup="naaivedh-sweet-shop-design-and-build.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">Naaivedh</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Restaurant</span>
+                </div>
+                <a href="naaivedh-sweet-shop-design-and-build.html" class="sp-bar-cta" data-popup="naaivedh-sweet-shop-design-and-build.html" aria-hidden="true">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+        <!-- 10 — The Hood by Olive -->
+        <li
+            class="sp-item"
+            id="sp-9"
+            data-index="9"
+            data-category="bar"
+            data-title="The Hood by Olive"
+            data-cat="Bar &amp; Kitchen"
+            data-loc="Bangalore"
+        >
+            <div class="sp-img">
+                <img src="images/projects/the%20hood/The%20Hood.jpg" alt="The Hood by Olive — Bar &amp; Kitchen Fit-Out, Bangalore" loading="lazy">
+            </div>
+            <div class="sp-overlay" aria-hidden="true">
+                <p class="sp-overlay-cat">Bar &amp; Kitchen &bull; Bangalore</p>
+                <p class="sp-overlay-name">The Hood by Olive</p>
+                <a href="the-hood-by-olive.html" class="sp-overlay-btn" data-popup="the-hood-by-olive.html">View Project <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+            <div class="sp-bar">
+                <span class="sp-bar-name">The Hood by Olive</span>
+                <div class="sp-bar-tags">
+                    <span class="portfolio-cat">Bar &amp; Kitchen</span>
+                    <span class="bull" aria-hidden="true">&bull;</span>
+                    <span class="portfolio-cat">Bangalore</span>
+                </div>
+                <a href="the-hood-by-olive.html" class="sp-bar-cta" data-popup="the-hood-by-olive.html">View <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+            </div>
+        </li>
+
+    </ol>
+</div><!-- /.scroll-portfolio -->
+
+<!-- =====================================================
+     PROCESS CALLOUT (unchanged from work.html)
+     ===================================================== -->
+<section class="section section-light">
+    <div class="container">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+            <div>
+                <span class="section-tag">The FlatPack Method&trade;</span>
+                <h2>Every Project Starts With<br>Understanding Your Business</h2>
+                <p>We do not impose a template on your restaurant. Every project begins with understanding your brand, your operations, and your growth plan — because the space we build is a business asset, not just an interior.</p>
+                <div class="mt-32">
+                    <a href="about-us.html" class="btn btn-primary">How the System Works <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:20px;">
+                <div style="background:var(--white); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:24px; display:flex; gap:16px; align-items:flex-start; box-shadow:var(--shadow-xs);">
+                    <div class="num-badge">1</div>
+                    <div>
+                        <h4 style="font-size:1rem; margin-bottom:6px;">Discovery</h4>
+                        <p style="font-size:0.875rem; color:var(--text-muted); margin:0;">Understanding your brand, your operations and your growth plan before a single design decision is made.</p>
+                    </div>
+                </div>
+                <div style="background:var(--white); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:24px; display:flex; gap:16px; align-items:flex-start; box-shadow:var(--shadow-xs);">
+                    <div class="num-badge">2</div>
+                    <div>
+                        <h4 style="font-size:1rem; margin-bottom:6px;">Design, Engineer &amp; Build</h4>
+                        <p style="font-size:0.875rem; color:var(--text-muted); margin:0;">Design, engineering and manufacturing run in parallel — compressing weeks from the traditional process.</p>
+                    </div>
+                </div>
+                <div style="background:var(--white); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:24px; display:flex; gap:16px; align-items:flex-start; box-shadow:var(--shadow-xs);">
+                    <div class="num-badge">3</div>
+                    <div>
+                        <h4 style="font-size:1rem; margin-bottom:6px;">Grand Opening</h4>
+                        <p style="font-size:0.875rem; color:var(--text-muted); margin:0;">On-site assembly in days, not weeks. A finished restaurant, on the date we committed to.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     CTA BANNER (unchanged from work.html)
+     ===================================================== -->
+<section class="cta-banner" style="background:var(--white); padding:100px 24px;">
+    <div class="cta-banner-content">
+        <h2 style="color:var(--text-dark);">Your Next Location<br>Could Be Here.</h2>
+        <p style="color:var(--text-muted);">Tell us about your restaurant project. We will show you what The FlatPack Method can deliver.</p>
+        <div class="cta-banner-btns">
+            <a href="contact-us.html" class="btn btn-primary">Start a Conversation <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="clients.html" class="btn btn-outline">Meet Our Clients</a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     FOOTER (unchanged from work.html)
+     ===================================================== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo-wrap">
+                    <img src="images/logo-white.png" alt="FlatPackCo" class="footer-logo-img">
+                </div>
+                <p>The F&amp;B Design-to-Build Platform. From concept to grand opening.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/flatpackco/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/flatpackco" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="solutions.html"><i class="fa-solid fa-chevron-right"></i> Solutions</a></li>
+                    <li><a href="Projects_new.html"><i class="fa-solid fa-chevron-right"></i> Our Work</a></li>
+                    <li><a href="clients.html"><i class="fa-solid fa-chevron-right"></i> Clients</a></li>
+                    <li><a href="blogs.html"><i class="fa-solid fa-chevron-right"></i> Blogs</a></li>
+                    <li><a href="restaurant-design-and-build.html"><i class="fa-solid fa-chevron-right"></i> Design & Build Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h5>Solutions</h5>
+                <ul class="footer-links">
+                    <li><a href="counter.html"><i class="fa-solid fa-chevron-right"></i> Counter Solutions</a></li>
+                    <li><a href="restaurant-cafe-wall-panelling.html"><i class="fa-solid fa-chevron-right"></i> Panelling &amp; Partitions</a></li>
+                    <li><a href="ceiling-design-for-bars-restaurants.html"><i class="fa-solid fa-chevron-right"></i> Design Ceilings</a></li>
+                    <li><a href="movable-furniture-for-restaurant-cafe.html"><i class="fa-solid fa-chevron-right"></i> Movable Furniture</a></li>
+                    <li><a href="dine-in-furniture.html"><i class="fa-solid fa-chevron-right"></i> Dine-In Furniture</a></li>
+                    <li><a href="floor-wall-solutions.html"><i class="fa-solid fa-chevron-right"></i> Floors &amp; Walls</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h5>Contact Us</h5>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p><strong>Phone</strong><br>+91 90822 66324</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p><strong>Email</strong><br>info@flatpackco.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><strong>Location</strong><br>Vasudev Chamber-B, 21, Old Nagardas Cross Rd, Andheri East, Mumbai, Maharashtra 400069</p>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <p><strong>Hours</strong><br>Mon–Fri, 9am–7pm · Sat, 10am–5pm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 FlatPackCo. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp float button -->
+<div class="whatsapp-float">
+    <a href="https://wa.me/919082266324" class="whatsapp-btn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i><span>Chat on WhatsApp</span>
+    </a>
+</div>
+
+<!-- =====================================================
+     JAVASCRIPT — vanilla ES6, no dependencies
+     ===================================================== -->
+<script>
+(function () {
+    'use strict';
+
+    /* --------------------------------------------------
+       DOM refs
+       -------------------------------------------------- */
+    var allItems      = Array.from(document.querySelectorAll('.sp-item'));
+    var spIndex       = document.getElementById('spIndex');
+    var spTitle       = document.getElementById('spTitle');
+    var spCat         = document.getElementById('spCat');
+    var spLoc         = document.getElementById('spLoc');
+    var spProgressFill = document.getElementById('spProgressFill');
+    var spProgressTrack = document.getElementById('spProgressTrack');
+    var spCurNum      = document.getElementById('spCurNum');
+    var spTotNum      = document.getElementById('spTotNum');
+    var spPrev        = document.getElementById('spPrev');
+    var spNext        = document.getElementById('spNext');
+
+    var visibleItems = allItems.slice();
+    var activeIndex  = 0;
+
+    /* --------------------------------------------------
+       Update left panel text with optional fade animation
+       -------------------------------------------------- */
+    function updatePanel (item, idx, total, animate) {
+        var num = String(idx + 1).padStart(2, '0');
+        var tot = String(total).padStart(2, '0');
+        var pct = ((idx + 1) / total) * 100;
+        var fields = [spTitle, spIndex, spCat, spLoc];
+
+        /* Mark active item */
+        visibleItems.forEach(function (s, i) {
+            s.classList.toggle('is-active', i === idx);
+        });
+        activeIndex = idx;
+
+        /* Progress bar */
+        spProgressFill.style.width = pct + '%';
+        spProgressTrack.setAttribute('aria-valuenow', Math.round(pct));
+
+        if (animate) {
+            /* Quick fade-out */
+            fields.forEach(function (f) {
+                f.style.transition = 'none';
+                f.style.opacity    = '0';
+                f.style.transform  = 'translateY(8px)';
+            });
+
+            /* Next frame: swap content then fade back in */
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    setContent();
+                    fields.forEach(function (f) {
+                        f.style.transition = 'opacity 0.32s ease, transform 0.32s ease';
+                        f.style.opacity    = '1';
+                        f.style.transform  = 'translateY(0)';
+                    });
+                });
+            });
+        } else {
+            setContent();
+            fields.forEach(function (f) {
+                f.style.opacity   = '1';
+                f.style.transform = 'translateY(0)';
+            });
+        }
+
+        function setContent () {
+            spIndex.textContent = num + ' / ' + tot;
+            spTitle.textContent = item.dataset.title;
+            spCat.textContent   = item.dataset.cat;
+            spCurNum.textContent = num;
+            spTotNum.textContent = tot;
+
+            var loc = item.dataset.loc;
+            if (loc) {
+                spLoc.innerHTML      = '<i class="fa-solid fa-location-dot" aria-hidden="true"></i> ' + loc;
+                spLoc.style.display  = '';
+            } else {
+                spLoc.style.display  = 'none';
+            }
+        }
+    }
+
+    /* --------------------------------------------------
+       IntersectionObserver — fires when a project section
+       crosses the vertical centre of the viewport
+       -------------------------------------------------- */
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting && !entry.target.classList.contains('is-hidden')) {
+                var idx = visibleItems.indexOf(entry.target);
+                if (idx !== -1 && idx !== activeIndex) {
+                    updatePanel(entry.target, idx, visibleItems.length, true);
+                }
+            }
+        });
+    }, {
+        root:       null,
+        rootMargin: '-38% 0px -38% 0px',
+        threshold:  0
+    });
+
+    allItems.forEach(function (item) { observer.observe(item); });
+
+    /* --------------------------------------------------
+       Smooth-scroll helpers
+       -------------------------------------------------- */
+    function scrollToIdx (idx) {
+        if (idx < 0 || idx >= visibleItems.length) return;
+        visibleItems[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    spPrev.addEventListener('click', function () { scrollToIdx(activeIndex - 1); });
+    spNext.addEventListener('click', function () { scrollToIdx(activeIndex + 1); });
+
+    /* Arrow key support (desktop) */
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowDown') { e.preventDefault(); scrollToIdx(activeIndex + 1); }
+        if (e.key === 'ArrowUp')   { e.preventDefault(); scrollToIdx(activeIndex - 1); }
+    });
+
+    /* --------------------------------------------------
+       Initial render
+       -------------------------------------------------- */
+    updatePanel(allItems[0], 0, allItems.length, false);
+
+}());
+</script>
+
+<!-- Site-wide scripts (header scroll, mobile menu, etc.) -->
+<script src="js/main.js"></script>
+
+<!-- Project Popup Modal -->
+<div class="project-popup" id="projectPopup" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="project-popup-backdrop"></div>
+    <div class="project-popup-inner">
+        <button class="project-popup-close" id="projectPopupClose" aria-label="Close project">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <iframe class="project-popup-frame" title="Project details" src=""></iframe>
+    </div>
+</div>
+</body>
+</html>

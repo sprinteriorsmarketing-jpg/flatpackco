@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /phpmailer/
+Disallow: /send-mail.php
+Disallow: /test-mail.php
+
+Sitemap: https://www.flatpackco.com/sitemap.xml
