@@ -1163,6 +1163,8 @@ p { color: var(--text-body); line-height: 1.8; }
     gap: 12px;
 }
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin: 0; }
+.footer-bottom p a,
+.landing-footer-inner p a { text-decoration: underline; }
 .footer-bottom-links { display: flex; gap: 20px; }
 .footer-bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 .footer-bottom-links a:hover { color: var(--accent); }
