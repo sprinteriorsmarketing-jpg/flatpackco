@@ -25,21 +25,71 @@
        MOBILE NAVIGATION TOGGLE
     ───────────────────────────────────────── */
     const mobileToggle = document.querySelector('.mobile-toggle');
-    const mainNav = document.querySelector('.main-nav');
+    const primaryNav = document.querySelector('.primary-nav');
 
-    if (mobileToggle && mainNav) {
+    if (mobileToggle && primaryNav) {
+        let closeBtn = null;
+
+        const closeNav = () => {
+            primaryNav.classList.remove('mobile-open');
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        };
+
+        mobileToggle.setAttribute('aria-expanded', 'false');
+
         mobileToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('open');
-            mobileToggle.classList.toggle('active');
-            document.body.classList.toggle('nav-open');
+            const isOpen = primaryNav.classList.toggle('mobile-open');
+            mobileToggle.classList.toggle('active', isOpen);
+            mobileToggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+
+            // Close button is added the first time the menu opens
+            if (isOpen && !closeBtn) {
+                closeBtn = document.createElement('span');
+                closeBtn.className = 'mobile-close-btn';
+                closeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                closeBtn.addEventListener('click', closeNav);
+                primaryNav.prepend(closeBtn);
+            }
         });
 
-        mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('open');
-                mobileToggle.classList.remove('active');
-                document.body.classList.remove('nav-open');
-            });
+        // Close on outside click
+        document.addEventListener('click', e => {
+            if (
+                primaryNav.classList.contains('mobile-open') &&
+                !primaryNav.contains(e.target) &&
+                !mobileToggle.contains(e.target)
+            ) {
+                closeNav();
+            }
+        });
+
+        // Parent links expand their dropdown; every other link closes the menu
+        primaryNav.querySelectorAll('.nav-item').forEach(item => {
+            const link = item.querySelector('.nav-link');
+            const dropdown = item.querySelector('.nav-dropdown');
+
+            if (link && dropdown) {
+                link.addEventListener('click', e => {
+                    if (primaryNav.classList.contains('mobile-open')) {
+                        e.preventDefault();
+                        item.classList.toggle('open');
+                    }
+                });
+            } else if (link) {
+                link.addEventListener('click', closeNav);
+            }
+        });
+
+        primaryNav.querySelectorAll('a:not(.nav-link)').forEach(link => {
+            link.addEventListener('click', closeNav);
+        });
+
+        // Don't leave the page scroll-locked if the screen grows past the mobile layout
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) closeNav();
         });
     }
 
