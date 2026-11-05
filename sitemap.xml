@@ -50,37 +50,37 @@
   </url>
   <url>
     <loc>https://www.flatpackco.com/counter</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/restaurant-cafe-wall-panelling</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/ceiling-design-for-bars-restaurants</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/movable-furniture-for-restaurant-cafe</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/dine-in-furniture</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/floor-wall-solutions</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -92,19 +92,19 @@
   </url>
   <url>
     <loc>https://www.flatpackco.com/kiosk-design-and-build-services</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/signage</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/lighting-design-for-commercial-spaces</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -116,7 +116,39 @@
   </url>
   <url>
     <loc>https://www.flatpackco.com/restaurant-design-and-build</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Commercial landing pages -->
+  <url>
+    <loc>https://www.flatpackco.com/restaurant-fit-out-company-mumbai</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.flatpackco.com/restaurant-fit-out-company-bengaluru</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.flatpackco.com/turnkey-restaurant-contractor</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.flatpackco.com/qsr-fit-out-company</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.flatpackco.com/restaurant-furniture-manufacturer-india</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -136,7 +168,7 @@
   </url>
   <url>
     <loc>https://www.flatpackco.com/harvest-salad-co-qsr-design</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -166,13 +198,13 @@
   </url>
   <url>
     <loc>https://www.flatpackco.com/social-e-city-bangalore-design-and-build</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.flatpackco.com/the-beer-cafe-restaurant-fit-out</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -182,14 +214,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://www.flatpackco.com/uttham-midway-lounge-sonipat</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Blog -->
+<!-- Blog -->
   <url>
     <loc>https://www.flatpackco.com/blogs</loc>
     <lastmod>2026-08-21</lastmod>
@@ -240,7 +265,7 @@
   </url>
   <url>
     <loc>https://www.flatpackco.com/restaurant-furniture-guide</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -324,7 +349,7 @@
   </url>
   <url>
     <loc>https://www.flatpackco.com/restaurant-contractor-vs-design-build</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

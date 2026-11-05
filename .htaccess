@@ -18,6 +18,11 @@ RewriteRule ^(test-mail|send-mail)\.php$ - [G,L,NC]
 RewriteRule ^phpmailer(/|$) - [F,L,NC]
 RewriteRule ^main\.js$ - [G,L,NC]
 
+# Project removed from the site: send old links to the portfolio and keep its
+# images unreachable, since deployment doesn't delete copies from the server.
+RewriteRule ^uttham-midway-lounge-sonipat(\.html)?$ /work [R=301,L,NC]
+RewriteRule ^images/projects/uttham-midway-lounge-sonipat/ - [G,L,NC]
+
 # Old project-page URLs -> new consistent lowercase-hyphenated slugs
 # NOTE: the Naaivedh rule is intentionally case-sensitive (no NC flag).
 # The only difference between the old and new URL is letter case, so
