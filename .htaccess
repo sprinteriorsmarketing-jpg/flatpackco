@@ -12,6 +12,12 @@ RewriteRule ^ https://www.flatpackco.com%{REQUEST_URI} [L,R=301]
 RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
 RewriteRule ^ / [L,R=301]
 
+# Removed scripts: deployment only copies files, so copies can remain on the
+# server after being deleted from the repo. Keep them unreachable.
+RewriteRule ^(test-mail|send-mail)\.php$ - [G,L,NC]
+RewriteRule ^phpmailer(/|$) - [F,L,NC]
+RewriteRule ^main\.js$ - [G,L,NC]
+
 # Old project-page URLs -> new consistent lowercase-hyphenated slugs
 # NOTE: the Naaivedh rule is intentionally case-sensitive (no NC flag).
 # The only difference between the old and new URL is letter case, so
