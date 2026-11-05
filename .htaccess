@@ -39,26 +39,26 @@ RewriteRule ^post/(.+)$ /$1 [R=301,L,NC]
 # Old URLs -> new URLs
 Redirect 301 /search https://www.flatpackco.com/blogs
 Redirect 301 /aboutus https://www.flatpackco.com/about-us
-Redirect 301 /panelling.html https://www.flatpackco.com/restaurant-cafe-wall-panelling
-Redirect 301 /design-ceilings.html https://www.flatpackco.com/ceiling-design-for-bars-restaurants
-Redirect 301 /movable-furniture.html https://www.flatpackco.com/movable-furniture-for-restaurant-cafe
-Redirect 301 /floors-walls.html https://www.flatpackco.com/floor-wall-solutions
-Redirect 301 /kiosk.html https://www.flatpackco.com/kiosk-design-and-build-services
-Redirect 301 /facade.html https://www.flatpackco.com/facade-design-restaurant
+RewriteRule ^panelling\.html$ /restaurant-cafe-wall-panelling [R=301,L,NC]
+RewriteRule ^design-ceilings\.html$ /ceiling-design-for-bars-restaurants [R=301,L,NC]
+RewriteRule ^movable-furniture\.html$ /movable-furniture-for-restaurant-cafe [R=301,L,NC]
+RewriteRule ^floors-walls\.html$ /floor-wall-solutions [R=301,L,NC]
+RewriteRule ^kiosk\.html$ /kiosk-design-and-build-services [R=301,L,NC]
+RewriteRule ^facade\.html$ /facade-design-restaurant [R=301,L,NC]
 RewriteRule ^fa%C3%A7ade-design\.html$ /facade-design-restaurant [R=301,L,NC]
-Redirect 301 /commercial-kitchen.html https://www.flatpackco.com/commercial-kitchen-equipment-for-restaurant-and-bar
-Redirect 301 /lighting.html https://www.flatpackco.com/lighting-design-for-commercial-spaces
-Redirect 301 /the-beer-cafe.html https://www.flatpackco.com/the-beer-cafe-restaurant-fit-out
-Redirect 301 /social-e-city.html https://www.flatpackco.com/social-e-city-bangalore-design-and-build
-Redirect 301 /poee-and-co.html https://www.flatpackco.com/poee-and-co-goa-bar-fit-out
-Redirect 301 /harvest-salad-co.html https://www.flatpackco.com/harvest-salad-co-qsr-design
-Redirect 301 /sangeetha-restaurant.html https://www.flatpackco.com/sangeetha-restaurant-restaurant-fit-out
-Redirect 301 /amoeba-sports-bar.html https://www.flatpackco.com/amoeba-sports-bar-design-and-build
-Redirect 301 /naaivedh.html https://www.flatpackco.com/naaivedh-sweet-shop-design-and-build
-Redirect 301 /amoeba-sports-bar-design-and-build-solutions.html https://www.flatpackco.com/amoeba-sports-bar-design-and-build
-Redirect 301 /poee-and-co-goa-bar-fit-out-solutions.html https://www.flatpackco.com/poee-and-co-goa-bar-fit-out
-Redirect 301 /social-e-city-bangalore-design-build-solutions.html https://www.flatpackco.com/social-e-city-bangalore-design-and-build
-Redirect 301 /naaivedh-sweet-shop-design-build.html https://www.flatpackco.com/naaivedh-sweet-shop-design-and-build
+RewriteRule ^commercial-kitchen\.html$ /commercial-kitchen-equipment-for-restaurant-and-bar [R=301,L,NC]
+RewriteRule ^lighting\.html$ /lighting-design-for-commercial-spaces [R=301,L,NC]
+RewriteRule ^the-beer-cafe\.html$ /the-beer-cafe-restaurant-fit-out [R=301,L,NC]
+RewriteRule ^social-e-city\.html$ /social-e-city-bangalore-design-and-build [R=301,L,NC]
+RewriteRule ^poee-and-co\.html$ /poee-and-co-goa-bar-fit-out [R=301,L,NC]
+RewriteRule ^harvest-salad-co\.html$ /harvest-salad-co-qsr-design [R=301,L,NC]
+RewriteRule ^sangeetha-restaurant\.html$ /sangeetha-restaurant-restaurant-fit-out [R=301,L,NC]
+RewriteRule ^amoeba-sports-bar\.html$ /amoeba-sports-bar-design-and-build [R=301,L,NC]
+RewriteRule ^naaivedh\.html$ /naaivedh-sweet-shop-design-and-build [R=301,L,NC]
+RewriteRule ^amoeba-sports-bar-design-and-build-solutions\.html$ /amoeba-sports-bar-design-and-build [R=301,L,NC]
+RewriteRule ^poee-and-co-goa-bar-fit-out-solutions\.html$ /poee-and-co-goa-bar-fit-out [R=301,L,NC]
+RewriteRule ^social-e-city-bangalore-design-build-solutions\.html$ /social-e-city-bangalore-design-and-build [R=301,L,NC]
+RewriteRule ^naaivedh-sweet-shop-design-build\.html$ /naaivedh-sweet-shop-design-and-build [R=301,L,NC]
 
 # Hide .html extension: if a browser directly requests a *.html URL,
 # send it to the extension-less version so the address bar never shows .html

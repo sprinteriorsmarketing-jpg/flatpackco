@@ -1221,7 +1221,7 @@
                    EXISTING SUCCESS FLOW
                 ───────────────────────────────── */
                 window.location.href =
-                    'thank-you.html';
+                    '/thank-you';
 
             } catch (err) {
                 console.error(
@@ -1449,7 +1449,7 @@
                 }
 
                 window.location.href =
-                    'thank-you.html';
+                    '/thank-you';
 
             } catch (err) {
                 console.error(
