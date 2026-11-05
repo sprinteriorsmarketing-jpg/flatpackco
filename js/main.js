@@ -66,6 +66,12 @@
             }
         });
 
+        // Phone-only contact link (the header button is hidden on small screens)
+        const mobileCta = document.createElement('div');
+        mobileCta.className = 'nav-item mobile-nav-cta';
+        mobileCta.innerHTML = '<a href="/contact-us" class="btn btn-primary">Talk To Us</a>';
+        primaryNav.appendChild(mobileCta);
+
         // Parent links expand their dropdown; every other link closes the menu
         primaryNav.querySelectorAll('.nav-item').forEach(item => {
             const link = item.querySelector('.nav-link');
@@ -787,19 +793,44 @@
 
 }());
 
-/* ─────────────────────────────────────────
-   CONTACT FORM — POST directly to BMS
-───────────────────────────────────────── */
-(function () {
+/* Toast messages shared by the contact and landing forms */
+function showToast(message, type = 'success') {
+    var toast =
+        document.createElement('div');
+
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: ${type === 'success' ? '#C8963E' : '#E53E3E'};
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        z-index: 9999;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        animation: fadeIn 0.3s ease;
+        font-family: 'Poppins', sans-serif;
+        max-width: calc(100vw - 40px);
+        text-align: center;
+    `;
+
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    setTimeout(function () {
+        if (toast.parentNode) {
+            toast.remove();
+        }
+    }, 3500);
+}
+
+/* Shared by the contact and landing forms. Loaded only on pages that call preload(). */
+var fpcoRecaptcha = (function () {
     'use strict';
-
-    var form =
-        document.getElementById('contact-form');
-
-    if (!form) return;
-
-    // Anti-spam: measure how long the contact form has been open.
-    var formStartTime = Date.now();
 
     /*
      * ANTI-SPAM — Google reCAPTCHA v3
@@ -879,49 +910,33 @@
         });
     }
 
-    if (isRecaptchaConfigured()) {
-        loadRecaptcha();
-    }
-
-    /*
-     * CONTACT FORM TOAST
-     *
-     * This is intentionally defined inside the contact-form
-     * IIFE so the FPCO contact form can access it.
-     */
-    function showToast(message, type = 'success') {
-        var toast =
-            document.createElement('div');
-
-        toast.style.cssText = `
-            position: fixed;
-            bottom: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: ${type === 'success' ? '#C8963E' : '#E53E3E'};
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            z-index: 9999;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            animation: fadeIn 0.3s ease;
-            font-family: 'Poppins', sans-serif;
-            max-width: calc(100vw - 40px);
-            text-align: center;
-        `;
-
-        toast.textContent = message;
-
-        document.body.appendChild(toast);
-
-        setTimeout(function () {
-            if (toast.parentNode) {
-                toast.remove();
+    return {
+        getToken: getRecaptchaToken,
+        preload: function () {
+            if (isRecaptchaConfigured()) {
+                loadRecaptcha();
             }
-        }, 3500);
-    }
+        }
+    };
+}());
+
+/* ─────────────────────────────────────────
+   CONTACT FORM — POST directly to BMS
+───────────────────────────────────────── */
+(function () {
+    'use strict';
+
+    var form =
+        document.getElementById('contact-form');
+
+    if (!form) return;
+
+    // Anti-spam: measure how long the contact form has been open.
+    var formStartTime = Date.now();
+
+    var getRecaptchaToken = fpcoRecaptcha.getToken;
+
+    fpcoRecaptcha.preload();
 
     // API field → form field name mapping
     var fieldMap = {
@@ -1253,6 +1268,11 @@
 
     if (!form) return;
 
+    // Anti-spam: same checks as the contact form
+    var formStartTime = Date.now();
+
+    fpcoRecaptcha.preload();
+
     var fieldMap = {
         full_name: 'full_name',
         phone: 'phone',
@@ -1354,9 +1374,17 @@
                 return params.get(key) || undefined;
             };
 
+            var recaptchaToken = await fpcoRecaptcha.getToken();
+
             var payload = {
                 full_name:
                     get('full_name'),
+
+                website: get('website'),
+
+                recaptcha_token: recaptchaToken || undefined,
+
+                form_time_ms: Date.now() - formStartTime,
 
                 phone:
                     get('phone'),
@@ -1436,8 +1464,34 @@
                     return;
                 }
 
+                var result = null;
+
+                try {
+                    result = await response.json();
+                } catch (parseError) {
+                    result = null;
+                }
+
+                // A blocked or duplicate lead must not reach the thank-you page
+                if (
+                    result &&
+                    ['duplicate', 'blocked', 'rate_limited'].indexOf(result.status) !== -1
+                ) {
+                    showToast(
+                        result.message ||
+                        'We could not process this request. Please try again later.',
+                        'error'
+                    );
+
+                    btn.disabled = false;
+                    btn.innerHTML = originalHTML;
+
+                    return;
+                }
+
                 if (!response.ok) {
                     showToast(
+                        (result && result.message) ||
                         'Something went wrong. Please try again.',
                         'error'
                     );

@@ -998,7 +998,6 @@ p { color: var(--text-body); line-height: 1.8; }
 .cta-banner-bg {
     position: absolute;
     inset: 0;
-    background-image: url('../images/cta-bg.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.18;
@@ -1182,7 +1181,6 @@ p { color: var(--text-body); line-height: 1.8; }
 .page-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('../images/page-hero-bg.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.18;
