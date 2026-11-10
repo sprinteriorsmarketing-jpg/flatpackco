@@ -29,6 +29,7 @@
    ===================== */
 @media (max-width: 992px) {
     h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
+    h2.prod-detail-title { font-size: clamp(2rem, 5vw, 2.8rem); }
     h2 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); }
 
     .section { padding: 64px 0; }
