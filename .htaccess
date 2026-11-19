@@ -35,6 +35,12 @@ RewriteRule ^blogs$ blogs.html [L,NC]
 RewriteRule ^uttham-midway-lounge-sonipat(\.html)?$ /work [R=301,L,NC]
 RewriteRule ^images/projects/uttham-midway-lounge-sonipat/ - [G,L,NC]
 
+# The Revolver Club project is hidden for now: send its page to the portfolio
+# with a temporary redirect and keep its images unreachable. Remove these two
+# lines (and restore the page from git) to publish it again.
+RewriteRule ^revolver-club-bengaluru-cafe-fit-out(\.html)?$ /work [R=302,L,NC]
+RewriteRule ^images/projects/revolver_club/ - [R=404,L,NC]
+
 # Old project-page URLs -> new consistent lowercase-hyphenated slugs
 # NOTE: the Naaivedh rule is intentionally case-sensitive (no NC flag).
 # The only difference between the old and new URL is letter case, so
