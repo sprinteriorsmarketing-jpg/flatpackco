@@ -105,6 +105,9 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
+
+/* In-content hyperlinks are bold sitewide (not nav, footer, buttons or card links) */
+:is(p, li, h3, h4, .info-widget, .contact-info-text, .sidebar-contact-info) a:not(.btn):not(header *, footer *, nav *) { font-weight: 700; }
 ul, ol { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 input, textarea, select { font-family: inherit; font-size: inherit; }
